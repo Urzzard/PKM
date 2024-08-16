@@ -1,0 +1,25 @@
+@import url(https://db.onlinewebfonts.com/c/900f8add35323c44ee840c611ed9a7a5?family=Pokemon+Classic+Regular);
+
+:root {
+  font-family: "Pokemon Classic Regular";
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:hover {
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+

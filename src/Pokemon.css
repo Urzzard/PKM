@@ -1,0 +1,570 @@
+.mostrando-pkm{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pkm-filtros{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto 30px auto;
+
+    input{
+        font-family: "Pokemon Classic Regular";
+        width: 40%;
+        padding: 8px 0px 8px 8px;
+        background: #242424;
+        border: solid 1px white;
+        box-shadow: 0px 0px 5px rgb(175, 175, 175);
+        text-shadow: 2px 2px 1px rgb(85, 85, 85);
+    }
+    select{
+        font-family: "Pokemon Classic Regular";
+        width: 40%;
+        padding: 8px 8px 8px 8px;
+        background: #242424;
+        border: solid 1px white;
+        box-shadow: 0px 0px 5px rgb(175, 175, 175);
+        text-shadow: 2px 2px 1px rgb(85, 85, 85);
+    }
+}
+
+.lista-pkm{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.caja-pkm{
+    width: 150px;
+    text-align: center;
+    border: 1px solid;
+    margin: 20px 20px 30px 20px;
+    box-shadow: 6px 6px 2px rgb(85, 85, 85);
+}
+
+.caja-pkm:hover{
+    cursor: pointer;
+    .pkm-img{
+        filter: drop-shadow(3px 1px 3px rgb(255, 255, 255));
+    }
+    border: solid 2px white;
+    .pkm-tittle{
+        border-top: 2px solid;
+    }
+}
+
+.pkm-img{
+    filter: grayscale(100%);
+    padding: 10px 0px 10px 0px;
+}
+
+.pkm-tittle{
+    border-top: 1px solid;
+    text-shadow: 2px 2px 1px rgb(85, 85, 85);
+    margin: 5px 0px 5px 0px;
+}
+
+.caja-pkm{
+    h4{
+        margin: 0px;
+        font-size: 12px;
+    }
+}
+
+
+.pkm-nombre{
+    padding: 5px 0px 5px 0px;
+}
+
+.msg-load{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.caja-load{
+    text-align: center;
+}
+
+
+
+
+/*DetallesPkm*/
+
+.detalle-pkm{
+    background: #242424;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 2px solid white;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    /* opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
+}
+
+/* .detalle-pkm.show {
+    opacity: 1; 
+    visibility: visible; 
+    transition-delay: 0s; 
+} */
+
+.close{
+    position: absolute;
+    margin: 5px 10px 5px 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.close:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.detalle-content{
+    padding: 15px;
+    width: 100%;
+
+    h2{
+        margin: 0px;
+        text-align: center;
+        text-shadow: 2.5px 2.5px 1px rgb(85, 85, 85);
+    }
+}
+
+.tipo-pkm{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.info-pkm{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px 10px 0px;
+}
+
+.pkm-detalle-imagen{
+    margin: auto 20px;
+}
+
+/*PARA LA IMG DEL POKEMON NORMAL*/
+
+
+.pkm-img-normal{
+    margin: auto;
+    width: 50%;
+}
+
+.pkm-img-normal.ocult{
+    display: none;
+}
+
+.img-normal{
+    display: flex;
+    justify-content: center;
+}
+
+
+.pkm-cambio{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    margin: 5px 0px 0px 0px;
+}
+.pkm-cambio-caja{
+    display: flex;
+    background: #6190c9;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 2px solid;
+}
+
+
+.cambio-content-1{
+    display: flex;
+    background: #3d7dca;
+    margin: 0px 3px 0px 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.pkm-c-label{
+    padding: 5px 10px 5px 5px;
+    text-shadow: 2px 2px 1px rgb(85, 85, 85);
+}
+
+.cambio-1{
+    margin: 6px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 7px rgb(255, 255, 255);
+}
+
+.cambio-2{
+    margin: 6px;
+    background: #3163a0;
+    color: #3163a0;
+    border-radius: 15px;
+}
+
+.cambio-2:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 7px rgb(255, 255, 255);
+}
+
+
+/* PARA LA IMG DEL PKM SHINY */
+
+.pkm-img-shiny{
+    margin: auto;
+    width: 50%;
+    display: none;
+}
+
+.img-shiny{
+    display: flex;
+    justify-content: center;
+}
+
+.pkm-img-shiny.show{
+    display: block;
+}
+
+
+/* PARA EL CAMBIO DE INFO */
+
+.pkm-detalle-info{
+    margin: auto 20px;
+}
+
+.pkm-info-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 13px;
+}
+
+.content-info-1{
+    margin: auto 10px;
+
+    h4{
+        font-size: 15px;
+        text-align: center;
+        
+    }
+    text-shadow: 2px 2px 1px rgb(85, 85, 85);
+}
+
+.pkm-info-1.ocult{
+    display: none;
+}
+
+.info-height{
+    display: flex;
+    margin-bottom: 30px;
+}
+.info-weight{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.info-basica-1-cambio{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.ib-name{
+    width: 50%;
+}
+
+.info-basica-1-cambio:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 7px rgb(255, 255, 255);
+}
+
+/* PARA EL CAMBIO DE INFO-2 */
+
+
+.pkm-info-2{
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    text-shadow: 2px 2px 1px rgb(85, 85, 85);
+}
+
+.pkm-info-2.show{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+}
+
+.content-info-2{
+    margin: auto 10px;
+    h4{
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+
+.stats-info{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.stat-name{
+    width: 70%;
+}
+
+.stat-number{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.cambio-oculto{
+    color: #242424;
+}
+
+
+/* COLORES TIPOS */
+
+.type-fire{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(253, 125, 36);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(66, 34, 10);
+    
+}
+
+.type-grass{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(155, 204, 80);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(49, 65, 26);
+
+}
+
+.type-poison{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(185, 127, 201);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(56, 39, 61);
+}
+
+.type-bug{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(114, 159, 63);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(44, 61, 24);
+}
+
+.type-fairy{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(253, 185, 233);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(65, 47, 59);
+    
+}
+
+.type-electric{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(238, 213, 53);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(58, 52, 14);
+}
+
+.type-ghost{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(123, 98, 163);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(40, 32, 53);
+}
+
+.type-rock{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(163, 140, 33);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(56, 48, 11);
+}
+
+.type-water{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(69, 146, 196);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(20, 43, 58);
+}
+
+.type-steel{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(158, 183, 184);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(50, 58, 58);
+}
+
+.type-psychic{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(243, 102, 185);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(65, 28, 49);
+}
+
+.type-normal{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(164, 172, 175);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(51, 53, 54);
+}
+
+.type-ice{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(81, 196, 231);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(22, 53, 63);
+}
+
+.type-dark{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(112, 112, 112);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(56, 56, 56);
+}
+
+.type-fighting{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: rgb(213, 103, 35);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(59, 29, 10);
+}
+
+.type-dragon{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: linear-gradient(rgb(83, 164, 207) 50%, rgb(241, 110, 87) 50%);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(22, 44, 56);
+}
+
+.type-flying{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: linear-gradient(rgb(61, 199, 239) 50%, rgb(189, 185, 184) 50%);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(49, 48, 48);
+}
+
+.type-ground{
+    margin: 10px;
+    padding: 3px 7px 3px 7px;
+    border: solid 2px;
+    border-radius: 5px;
+    background: linear-gradient(rgb(247, 222, 63) 50%, rgb(171, 152, 66) 50%);
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 2px 2px 1px rgb(53, 47, 20);
+}
+
+@media (max-width:768px) {
+
+    .pkm-filtros{
+        width: 90%;
+    }
+    
+}
+
+
+@media (max-width:680px){
+
+    .detalle-content{
+        h2{
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    }
+
+    .info-pkm{
+        display: inline-block;
+    }
+
+    .pkm-detalle-info{
+        border-top: 1px solid rgb(58, 58, 58);
+        margin-top: 20px;
+    }
+
+    .pkm-filtros{
+        width: 80%;
+        flex-wrap: wrap;
+
+
+        input{
+            width: 60%;
+            margin-bottom: 20px;
+        }
+        select{
+            width: 60%;
+        }
+    }
+
+}
